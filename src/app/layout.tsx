@@ -3,6 +3,7 @@ import {
   Bricolage_Grotesque,
   Geist,
   Geist_Mono,
+  Gochi_Hand,
   Inter,
   Rubik,
 } from "next/font/google";
@@ -22,6 +23,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
+});
+
+const gochiHand = Gochi_Hand({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-gochi-hand",
 });
 
 const grotesque = Bricolage_Grotesque({
@@ -56,7 +63,7 @@ export default function RootLayout({
         <body
           className={cn(
             "min-h-screen bg-background font-inter antialiased",
-            `${geistSans.variable} ${geistMono.variable} ${grotesque.variable} ${inter.variable} ${rubik.variable} `,
+            `${geistSans.variable} ${geistMono.variable} ${gochiHand.variable} ${grotesque.variable} ${inter.variable} ${rubik.variable}`,
           )}
           suppressHydrationWarning
         >

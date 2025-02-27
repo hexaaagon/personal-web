@@ -1,10 +1,29 @@
 "use client";
+import { cn } from "@/lib/utils";
 
-export default function PageUnavailable() {
+import Link from "@/components/link";
+
+import { buttonVariants } from "@/components/ui/button";
+import FuzzyText from "@/components/ui/fuzzy-text";
+
+export default function NotFound() {
   return (
     <main className="flex flex-col items-center space-y-4">
-      <p className="font-geist-mono text-6xl font-medium">503</p>
-      <p>Page unavailable.</p>
+      <div className="flex max-h-[119px] flex-col items-center">
+        <FuzzyText fontSize={100}>503</FuzzyText>
+        <FuzzyText fontSize={40} fontFamily="Gochi Hand">
+          service unavailable
+        </FuzzyText>
+      </div>
+      <Link
+        href="/"
+        className={cn(
+          buttonVariants({ size: "sm", variant: "ghost" }),
+          "font-geist-mono",
+        )}
+      >
+        go back
+      </Link>
     </main>
   );
 }
