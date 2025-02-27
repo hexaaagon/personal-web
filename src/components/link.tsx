@@ -1,12 +1,16 @@
 "use client";
+import type React from "react";
+
+import { usePathname } from "next/navigation";
 import { useTransitionRouter } from "next-view-transitions";
-import React from "react";
 
 export default function Link({
   children,
   href,
   ...props
 }: Omit<React.ComponentProps<"a">, "onClick"> & { href: string }) {
+  const pathname = usePathname();
+
   const router = useTransitionRouter();
 
   function slideInOut() {
@@ -39,7 +43,7 @@ export default function Link({
         },
       ],
       {
-        duration: 1500,
+        duration: 1200,
         easing: "cubic-bezier(0.87, 0, 0.13, 1)",
         fill: "forwards",
         pseudoElement: "::view-transition-new(root)",
@@ -51,9 +55,10 @@ export default function Link({
     <a
       onClick={(e) => {
         e.preventDefault();
-        router.push(href, {
-          onTransitionReady: slideInOut,
-        });
+        if (pathname !== href)
+          router.push(href, {
+            onTransitionReady: slideInOut,
+          });
       }}
       href={href}
       {...props}

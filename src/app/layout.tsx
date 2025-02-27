@@ -13,7 +13,9 @@ import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
+
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
@@ -72,6 +74,7 @@ export default function RootLayout({
               <Navbar />
               <Separator className="mb-12" />
               {children}
+              <Footer />
             </div>
           </ThemeProvider>
         </body>

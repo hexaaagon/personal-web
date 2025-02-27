@@ -5,10 +5,11 @@ import Link from "@/components/link";
 
 import { buttonVariants } from "@/components/ui/button";
 import FuzzyText from "@/components/ui/fuzzy-text";
+import FadeContent from "@/components/ui/fade-content";
 
 export default function NotFound() {
   return (
-    <main className="flex flex-col items-center space-y-4">
+    <FadeContent className="flex flex-col items-center space-y-4">
       <div className="flex max-h-[119px] flex-col items-center">
         <FuzzyText fontSize={100}>503</FuzzyText>
         <FuzzyText fontSize={40} fontFamily="Gochi Hand">
@@ -22,8 +23,8 @@ export default function NotFound() {
           "font-geist-mono",
         )}
       >
-        go back
+        go home
       </Link>
-    </main>
+    </FadeContent>
   );
 }
