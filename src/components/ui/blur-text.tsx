@@ -43,12 +43,12 @@ export const BlurText: React.FC<BlurTextProps> = ({
       ? {
           filter: "blur(10px)",
           opacity: 0,
-          transform: "translate3d(0,-50px,0)",
+          transform: "translate3d(0,-20px,0)",
         }
       : {
           filter: "blur(10px)",
           opacity: 0,
-          transform: "translate3d(0,50px,0)",
+          transform: "translate3d(0,20px,0)",
         };
 
   const defaultTo: Record<string, any>[] = [
