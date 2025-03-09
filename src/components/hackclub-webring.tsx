@@ -12,6 +12,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Skeleton } from "./ui/skeleton";
 
 export default function HCWebring() {
   const { data } = useSWR(
@@ -24,10 +25,11 @@ export default function HCWebring() {
       <Tooltip delayDuration={50}>
         <TooltipTrigger className="group flex items-center space-x-2">
           {!data ? (
-            <></>
+            <ChevronLeft size={16} className="animate-pulse" />
           ) : (
             <Link href={data.previous.url}>
               <ChevronLeft size={16} />
+              <p className="sr-only">View previous member</p>
             </Link>
           )}
           <Link href="https://webring.hackclub.com">
@@ -40,10 +42,11 @@ export default function HCWebring() {
             />
           </Link>
           {!data ? (
-            <></>
+            <ChevronRight size={16} className="animate-pulse" />
           ) : (
             <Link href={data.next.url}>
               <ChevronRight size={16} />
+              <p className="sr-only">View next member</p>
             </Link>
           )}
         </TooltipTrigger>
