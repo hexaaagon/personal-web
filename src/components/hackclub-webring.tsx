@@ -21,13 +21,16 @@ export default function HCWebring() {
 
   return (
     <TooltipProvider>
-      <Tooltip delayDuration={50}>
+      <Tooltip delayDuration={150}>
         <TooltipTrigger className="group flex items-center space-x-2">
           {!data ? (
             <ChevronLeft size={16} className="animate-pulse" />
           ) : (
             <Link href={data.previous.url}>
-              <ChevronLeft size={16} />
+              <ChevronLeft
+                size={16}
+                className="transition hover:text-blue-300"
+              />
               <p className="sr-only">View previous member</p>
             </Link>
           )}
@@ -44,7 +47,10 @@ export default function HCWebring() {
             <ChevronRight size={16} className="animate-pulse" />
           ) : (
             <Link href={data.next.url}>
-              <ChevronRight size={16} />
+              <ChevronRight
+                size={16}
+                className="transition hover:text-blue-300"
+              />
               <p className="sr-only">View next member</p>
             </Link>
           )}
