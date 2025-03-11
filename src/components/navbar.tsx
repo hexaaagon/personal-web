@@ -7,8 +7,9 @@ import { cn } from "@/lib/utils";
 import ThemeSwitch from "./theme-switch";
 
 const urls: Array<{ name: string; href: string; className?: string }> = [
-  { name: "about", href: "/" },
+  { name: "home", href: "/" },
   { name: "blogs", href: "/blogs/*" },
+  { name: "guestbook", href: "/guestbook/*" },
 ];
 
 export function Navbar() {

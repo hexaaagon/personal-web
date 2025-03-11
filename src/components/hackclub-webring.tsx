@@ -12,7 +12,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Skeleton } from "./ui/skeleton";
 
 export default function HCWebring() {
   const { data } = useSWR(
