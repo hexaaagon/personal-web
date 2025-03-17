@@ -1,15 +1,14 @@
 {
-  "name": "website",
+  "name": "personal-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@gsap/react": "^2.1.2",
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-separator": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.2",
@@ -17,48 +16,33 @@
     "@react-spring/web": "^9.7.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.18.2",
-    "gsap": "^3.12.7",
-    "lenis": "^1.1.21",
-    "lucide-react": "^0.468.0",
-    "nanoid": "^5.1.2",
-    "next": "15.2.0",
-    "next-themes": "^0.4.4",
+    "framer-motion": "^12.5.0",
+    "lenis": "^1.2.3",
+    "lucide-react": "^0.482.0",
+    "nanoid": "^5.1.4",
+    "next": "^15.2.2",
+    "next-themes": "^0.4.6",
     "next-view-transitions": "^0.3.4",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "react-markdown": "^9.1.0",
-    "react-use-lanyard": "^0.3.2",
-    "sonner": "^1.7.4",
-    "swr": "^2.3.2",
-    "tailwind-merge": "^2.6.0",
-    "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.24.2"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "9.1",
+    "sonner": "^2.0.1",
+    "swr": "^2.3.3",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@types/node": "^20.17.19",
-    "@types/react": "19.0.10",
-    "@types/react-dom": "19.0.4",
-    "dotenv": "^16.4.7",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "15.2.0",
-    "postcss": "^8.5.3",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.2",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^3.4.17",
-    "tsx": "^4.19.3",
-    "typescript": "^5.7.3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "19.0.10",
-      "@types/react-dom": "19.0.4"
-    },
-    "onlyBuiltDependencies": [
-      "@sentry/cli",
-      "esbuild",
-      "sharp"
-    ]
-  },
-  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3"
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

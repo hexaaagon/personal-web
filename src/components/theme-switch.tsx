@@ -1,14 +1,17 @@
 "use client";
 
 import { Sun, Moon } from "lucide-react";
-import { Button, ButtonProps } from "@/components/ui/button";
+import type { Button } from "@/components/ui/button";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { Skeleton } from "./ui/skeleton";
 
-export default function ThemeSwitch({ className, ...props }: ButtonProps) {
+export default function ThemeSwitch({
+  className,
+  ...props
+}: React.ComponentProps<typeof Button>) {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 

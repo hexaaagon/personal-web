@@ -16,9 +16,9 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="relative z-[100] flex items-center justify-between py-8 font-geist-mono">
+    <nav className="relative z-[100] flex items-center justify-between py-8 font-mono">
       <Link href="/">hexaa</Link>
-      <div className="flex items-center space-x-4 text-foreground/60">
+      <div className="text-foreground/60 flex items-center space-x-4">
         {urls.map(({ name, href, className }) => {
           const isActive = href.endsWith("/*")
             ? pathname.startsWith(href.replace("/*", ""))

@@ -20,7 +20,7 @@ export default function NotFound() {
         href="/"
         className={cn(
           buttonVariants({ size: "sm", variant: "ghost" }),
-          "font-geist-mono",
+          "font-mono",
         )}
       >
         go home
