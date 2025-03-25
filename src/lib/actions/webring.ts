@@ -12,7 +12,7 @@ export async function getWebring(
   const members = (await response.json()) as Member[];
 
   const siteIndex = members.findIndex(
-    (member) => new URL(member.url).hostname === process.env.ORIGIN_URL,
+    (member) => new URL(member.url).hostname === "hexaa.sh",
   );
   const previousIndex = (siteIndex - 1 + members.length) % members.length;
   const nextIndex = (siteIndex + 1) % members.length;
