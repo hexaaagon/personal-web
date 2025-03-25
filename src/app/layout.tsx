@@ -12,7 +12,6 @@ import "./globals.css";
 
 import { ViewTransitions } from "next-view-transitions";
 import { cn } from "@/lib/utils";
-import { Separator } from "@/components/ui/separator";
 
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -64,7 +63,7 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body
           className={cn(
-            "min-h-screen bg-background font-inter antialiased",
+            "bg-background font-inter min-h-screen antialiased",
             `${geistSans.variable} ${geistMono.variable} ${gochiHand.variable} ${grotesque.variable} ${inter.variable} ${rubik.variable}`,
           )}
           suppressHydrationWarning
@@ -72,7 +71,6 @@ export default function RootLayout({
           <ThemeProvider>
             <div className="mx-auto flex min-h-screen max-w-screen-md flex-col px-4">
               <Navbar />
-              <Separator className="mb-12" />
               {children}
               <Footer />
             </div>
