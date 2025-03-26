@@ -12,7 +12,7 @@ export function Footer() {
     <FadeContent className="mt-auto">
       <Separator />
       <footer className="flex justify-between px-2 py-5">
-        <p className="text-sm">&copy; 2025 - Hexaa</p>
+        <p className="text-sm">&copy; {new Date().getFullYear()} - Hexaa</p>
         {pathname === "/" && <HCWebring />}
       </footer>
     </FadeContent>

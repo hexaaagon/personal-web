@@ -29,7 +29,8 @@
     "sonner": "^2.0.1",
     "swr": "^2.3.3",
     "tailwind-merge": "^3.0.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
