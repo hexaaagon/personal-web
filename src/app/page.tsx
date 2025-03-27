@@ -18,7 +18,7 @@ export default function Landing() {
 
   return (
     <main className="font-sans">
-      <section className="flex flex-col justify-center space-y-8 px-4 transition-all *:w-full md:flex-row-reverse">
+      <section className="flex flex-col justify-center gap-4 px-4 transition-all *:w-full md:flex-row-reverse md:gap-0">
         <div className="bg-foreground/20">
           <br />
           <br />
@@ -57,7 +57,7 @@ export default function Landing() {
           </span>
         </div>
       </section>
-      <Separator />
+      <Separator className="my-8" />
     </main>
   );
 }
