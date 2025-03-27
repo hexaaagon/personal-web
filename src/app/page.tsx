@@ -5,7 +5,6 @@ import { toast } from "sonner";
 import Typewriter from "typewriter-effect";
 
 import { Separator } from "@/components/ui/separator";
-import { Toaster } from "@/components/ui/sonner";
 
 export default function Landing() {
   useEffect(() => {
