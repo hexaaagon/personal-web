@@ -1,11 +1,18 @@
 "use client";
-import { Separator } from "@/components/ui/separator";
+import { useEffect } from "react";
+import { toast } from "sonner";
+
 import Typewriter from "typewriter-effect";
 
-// animation will be done after this whole page completed.
-// import BlurText from "@/components/ui/blur-text";
+import { Separator } from "@/components/ui/separator";
 
 export default function Landing() {
+  useEffect(() => {
+    toast.warning("This website is under development.", {
+      description: "You may encounter bugs or unfinished UI elements.",
+    });
+  }, []);
+
   return (
     <main className="font-sans">
       <section className="flex flex-col justify-center space-y-8 px-4 transition-all *:w-full md:flex-row-reverse">
