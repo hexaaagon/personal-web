@@ -10,7 +10,6 @@ import {
 
 import "./globals.css";
 
-import { ViewTransitions } from "next-view-transitions";
 import { cn } from "@/lib/utils";
 
 import { Navbar } from "@/components/navbar";
@@ -59,24 +58,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en" suppressHydrationWarning>
-        <body
-          className={cn(
-            "bg-background font-inter min-h-screen antialiased",
-            `${geistSans.variable} ${geistMono.variable} ${gochiHand.variable} ${grotesque.variable} ${inter.variable} ${rubik.variable}`,
-          )}
-          suppressHydrationWarning
-        >
-          <ThemeProvider>
-            <div className="mx-auto flex min-h-screen max-w-screen-md flex-col px-4">
-              <Navbar />
-              {children}
-              <Footer />
-            </div>
-          </ThemeProvider>
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          "bg-background font-inter min-h-screen antialiased",
+          `${geistSans.variable} ${geistMono.variable} ${gochiHand.variable} ${grotesque.variable} ${inter.variable} ${rubik.variable}`,
+        )}
+        suppressHydrationWarning
+      >
+        <ThemeProvider>
+          <div className="mx-auto flex min-h-screen max-w-screen-md flex-col px-4">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

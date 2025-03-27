@@ -5,12 +5,15 @@ import { toast } from "sonner";
 import Typewriter from "typewriter-effect";
 
 import { Separator } from "@/components/ui/separator";
+import { Toaster } from "@/components/ui/sonner";
 
 export default function Landing() {
   useEffect(() => {
-    toast.warning("This website is under development.", {
-      description: "You may encounter bugs or unfinished UI elements.",
-    });
+    setTimeout(() => {
+      toast.warning("This website is under development.", {
+        description: "You may encounter bugs or unfinished UI elements.",
+      });
+    }, 1000);
   }, []);
 
   return (
