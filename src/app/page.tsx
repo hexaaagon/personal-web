@@ -18,7 +18,7 @@ export default function Landing() {
 
             <Link
               href="https://hexagonn.my.id"
-              className={buttonVariants({ variant: "outline" })}
+              className={buttonVariants({ variant: "outline", size: "sm" })}
             >
               Go to old website
             </Link>
