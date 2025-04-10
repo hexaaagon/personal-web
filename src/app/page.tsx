@@ -5,12 +5,25 @@ import { toast } from "sonner";
 import Typewriter from "typewriter-effect";
 
 import { Separator } from "@/components/ui/separator";
+import { Button, buttonVariants } from "@/components/ui/button";
+import Link from "@/components/link";
 
 export default function Landing() {
   useEffect(() => {
     setTimeout(() => {
       toast.warning("This website is under development.", {
-        description: "You may encounter bugs or unfinished UI elements.",
+        description: (
+          <div className="flex flex-col gap-2">
+            <p>You may encounter bugs or unfinished UI elements.</p>
+
+            <Link
+              href="https://hexagonn.my.id"
+              className={buttonVariants({ variant: "outline" })}
+            >
+              Go to old website
+            </Link>
+          </div>
+        ),
       });
     }, 1000);
   }, []);
