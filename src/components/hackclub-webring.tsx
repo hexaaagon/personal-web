@@ -24,11 +24,11 @@ export default function HCWebring() {
       <Tooltip delayDuration={150}>
         <TooltipTrigger className="group flex items-center space-x-2">
           {!data ? (
-            <ChevronLeft size={16} className="animate-pulse" />
+            <ChevronLeft size={14} className="animate-pulse" />
           ) : (
             <Link href={data.previous.url}>
               <ChevronLeft
-                size={16}
+                size={14}
                 className="transition hover:text-blue-300"
               />
               <p className="sr-only">View previous member</p>
@@ -38,17 +38,17 @@ export default function HCWebring() {
             <Image
               src="/static/images/hackclub.svg"
               alt="Hack Club Webring"
-              width={20}
-              height={20}
+              width={18}
+              height={18}
               className="grayscale transition-[filter] duration-300 group-hover:grayscale-0"
             />
           </Link>
           {!data ? (
-            <ChevronRight size={16} className="animate-pulse" />
+            <ChevronRight size={14} className="animate-pulse" />
           ) : (
             <Link href={data.next.url}>
               <ChevronRight
-                size={16}
+                size={14}
                 className="transition hover:text-blue-300"
               />
               <p className="sr-only">View next member</p>

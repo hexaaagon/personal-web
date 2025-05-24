@@ -1,20 +1,22 @@
-"use client";
-import { usePathname } from "next/navigation";
+import Link from "next/link";
+import HCWebring from "./hackclub-webring";
 
-import HCWebring from "@/components/hackclub-webring";
-import FadeContent from "@/components/ui/fade-content";
-import { Separator } from "@/components/ui/separator";
-
-export function Footer() {
-  const pathname = usePathname();
-
+export default function Footer() {
   return (
-    <FadeContent className="mt-auto">
-      <Separator />
-      <footer className="flex justify-between px-2 py-5">
-        <p className="text-sm">&copy; {new Date().getFullYear()} - Hexaa</p>
-        {pathname === "/" && <HCWebring />}
-      </footer>
-    </FadeContent>
+    <footer className="-mx-[4%] flex items-center justify-between py-4">
+      <p className="text-muted-foreground text-2xs max-w-[60%] leading-3">
+        This website is available on{" "}
+        <Link
+          href="https://github.com/hexaaagon/personal-web"
+          className="hover:text-primary underline transition-colors"
+        >
+          Github
+        </Link>{" "}
+        as open-source.
+      </p>
+      <div className="flex">
+        <HCWebring />
+      </div>
+    </footer>
   );
 }

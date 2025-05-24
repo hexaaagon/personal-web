@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ["raspberrypi.local"],
+  /* config options here */
 };
 
 export default nextConfig;

@@ -1,17 +1,17 @@
 "use client";
-
-import { Sun, Moon } from "lucide-react";
-import type { Button } from "@/components/ui/button";
-
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+
 import { cn } from "@/lib/utils";
-import { Skeleton } from "./ui/skeleton";
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function ThemeSwitch({
   className,
+  onClick,
   ...props
-}: React.ComponentProps<typeof Button>) {
+}: Omit<React.ComponentProps<typeof Button>, "size" | "variant">) {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
@@ -20,26 +20,25 @@ export default function ThemeSwitch({
   }, []);
 
   if (!mounted) {
-    return <Skeleton className={cn("size-4 rounded-full", className)} />;
+    return <Skeleton className={cn("h-8 w-16 rounded-full px-6", className)} />;
   }
 
   return (
-    <button
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className={cn(className)}
+    <Button
+      className="h-8 cursor-pointer rounded-full has-[>svg]:px-6"
+      size="sm"
+      variant="secondary"
+      onClick={(e) => {
+        setTheme(resolvedTheme === "dark" ? "light" : "dark");
+        onClick?.(e);
+      }}
       {...props}
     >
       {resolvedTheme === "dark" ? (
-        <>
-          <Sun className="size-4" />
-          <p className="sr-only">Change theme to Light Mode</p>
-        </>
+        <Moon size={13.5} suppressHydrationWarning />
       ) : (
-        <>
-          <Moon className="size-4" />
-          <p className="sr-only">Change theme to Dark Mode</p>
-        </>
+        <Sun size={13.5} suppressHydrationWarning />
       )}
-    </button>
+    </Button>
   );
 }
