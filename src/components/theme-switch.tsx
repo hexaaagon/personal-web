@@ -27,7 +27,7 @@ export default function ThemeSwitch({
     <Button
       className="h-8 cursor-pointer rounded-full has-[>svg]:px-6"
       size="sm"
-      variant="secondary"
+      variant="outline"
       onClick={(e) => {
         setTheme(resolvedTheme === "dark" ? "light" : "dark");
         onClick?.(e);
@@ -35,9 +35,15 @@ export default function ThemeSwitch({
       {...props}
     >
       {resolvedTheme === "dark" ? (
-        <Moon size={13.5} suppressHydrationWarning />
+        <>
+          <Moon size={13.5} suppressHydrationWarning />
+          <span className="sr-only">Switch to light mode</span>
+        </>
       ) : (
-        <Sun size={13.5} suppressHydrationWarning />
+        <>
+          <Sun size={13.5} suppressHydrationWarning />
+          <span className="sr-only">Switch to dark mode</span>
+        </>
       )}
     </Button>
   );

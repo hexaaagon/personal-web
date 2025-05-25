@@ -7,7 +7,7 @@ export default function Home() {
       <p className="text-muted-foreground text-justify text-xs sm:text-base">
         yeah, this site is still under development.
       </p>
-      <div className="text-muted-foreground/50 flex gap-2 font-mono text-xs *:transition *:hover:underline sm:text-sm">
+      <div className="flex gap-2 font-mono text-xs text-sky-700 *:transition-all *:hover:underline sm:text-sm dark:text-sky-600">
         <Link href="https://redesign.hexaa.sh">[development]</Link>
         <Link href="https://hexagonn.my.id">[old website]</Link>
       </div>
