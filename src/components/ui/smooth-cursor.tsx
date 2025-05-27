@@ -40,50 +40,9 @@ const DefaultCursorSVG: FC = () => {
           d="M43.7146 40.6933L28.5431 6.34306C27.3556 3.65428 23.5772 3.69516 22.3668 6.32755L6.57226 40.6778C5.3134 43.4156 7.97238 46.298 10.803 45.2549L24.7662 40.109C25.0221 40.0147 25.2999 40.0156 25.5494 40.1082L39.4193 45.254C42.2261 46.2953 44.9254 43.4347 43.7146 40.6933Z"
           stroke="white"
           strokeWidth={2.25825}
-          className="fill-white/10"
+          className="fill-white/[0.15]"
         />
       </g>
-      <defs>
-        <filter id="blueFill">
-          <feFlood floodColor="blue" floodOpacity="1" result="blue" />
-          <feComposite in="blue" in2="SourceAlpha" operator="in" />
-        </filter>
-        <filter
-          id="filter0_d_91_7928"
-          x={0.602397}
-          y={0.952444}
-          width={49.0584}
-          height={52.428}
-          filterUnits="userSpaceOnUse"
-          colorInterpolationFilters="sRGB"
-        >
-          <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy={2.25825} />
-          <feGaussianBlur stdDeviation={2.25825} />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_91_7928"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow_91_7928"
-            result="shape"
-          />
-        </filter>
-      </defs>
     </svg>
   );
 };
@@ -121,6 +80,7 @@ export function SmoothCursor({
   disableRotation = false,
   cursorType = "default",
 }: SmoothCursorProps) {
+  const [hasMoved, setHasMoved] = useState(false);
   const [isMoving, setIsMoving] = useState(false);
   const [isOverText, setIsOverText] = useState(false);
   const [isOverPointer, setIsOverPointer] = useState(false);
@@ -142,6 +102,8 @@ export function SmoothCursor({
     stiffness: 500,
     damping: 35,
   });
+
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const updateVelocity = (currentPos: Position) => {
@@ -216,6 +178,7 @@ export function SmoothCursor({
         }
         scale.set(0.95);
         setIsMoving(true);
+        setHasMoved(true);
 
         const timeout = setTimeout(() => {
           scale.set(1);
@@ -236,19 +199,17 @@ export function SmoothCursor({
       });
     };
 
-    document.body.style.cursor = "none";
+    if (!isMobile) document.body.style.cursor = "none";
     window.addEventListener("mousemove", throttledMouseMove);
 
     return () => {
       window.removeEventListener("mousemove", throttledMouseMove);
-      document.body.style.cursor = "auto";
+      if (!isMobile) document.body.style.cursor = "auto";
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, [cursorX, cursorY, rotation, scale, disableRotation]);
+  }, [cursorX, cursorY, rotation, scale, disableRotation, isMobile]);
 
-  const isMobile = useIsMobile();
-
-  if (isMobile) {
+  if (isMobile || !hasMoved) {
     return <></>;
   }
 
@@ -272,9 +233,10 @@ export function SmoothCursor({
         initial={{ opacity: 0 }}
         animate={{
           opacity: cursorType === "pointer" || isOverPointer ? 1 : 0,
-          scale: isMoving ? 1.5 : 1,
+          scale: isMoving ? 1.4 : 1,
+          filter: isMoving ? "blur(2px)" : "none",
         }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3 }}
         className={`pointer-events-none h-[32px] w-[32px] rounded-full border bg-white transition-all duration-300 ease-out will-change-transform`}
       ></motion.div>
 
@@ -284,7 +246,7 @@ export function SmoothCursor({
           opacity:
             (cursorType === "text" || isOverText) && !isOverPointer ? 1 : 0,
         }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3 }}
         style={{ position: "absolute", top: 0, left: 0 }}
       >
         <TextCursorSVG />
@@ -301,7 +263,7 @@ export function SmoothCursor({
               ? 0
               : 1,
         }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3 }}
         style={{
           rotate: disableRotation ? -45 : rotation,
           position: "absolute",
