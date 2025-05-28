@@ -25,7 +25,7 @@ export default function ThemeSwitch({
 
   return (
     <Button
-      className="h-8 rounded-full has-[>svg]:px-6"
+      className="h-8 rounded-full shadow-xl has-[>svg]:px-6"
       size="sm"
       variant="outline"
       onClick={(e) => {

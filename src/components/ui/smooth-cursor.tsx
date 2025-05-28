@@ -1,7 +1,7 @@
 "use client";
 
 import { useIsMobile } from "@/hooks/use-mobile";
-import { motion, useSpring } from "motion/react";
+import { motion, useSpring, useReducedMotion } from "motion/react";
 import { FC, JSX, useEffect, useRef, useState } from "react";
 
 interface Position {
@@ -30,6 +30,7 @@ const DefaultCursorSVG: FC = () => {
       viewBox="0 0 50 54"
       fill="none"
       style={{ scale: 0.5, transform: "translate(0px, 0px)" }}
+      shapeRendering="geometricPrecision"
     >
       <g>
         <path
@@ -61,6 +62,7 @@ const TextCursorSVG: FC = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
       style={{ transform: "translate(5px, 5px)" }}
+      shapeRendering="geometricPrecision"
     >
       <path d="M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1" />
       <path d="M7 22h1a4 4 0 0 0 4-4v-1" />
@@ -72,14 +74,17 @@ const TextCursorSVG: FC = () => {
 export function SmoothCursor({
   cursor = <DefaultCursorSVG />,
   springConfig = {
-    damping: 45,
-    stiffness: 400,
-    mass: 1,
+    stiffness: 800,
+    damping: 50,
+    mass: 0.5,
     restDelta: 0.001,
   },
   disableRotation = false,
   cursorType = "default",
 }: SmoothCursorProps) {
+  const isMobile = useIsMobile();
+  const prefersReducedMotion = useReducedMotion();
+
   const [hasMoved, setHasMoved] = useState(false);
   const [isMoving, setIsMoving] = useState(false);
   const [isOverText, setIsOverText] = useState(false);
@@ -95,17 +100,17 @@ export function SmoothCursor({
   const rotation = useSpring(-45, {
     ...springConfig,
     damping: 60,
-    stiffness: 300,
+    stiffness: 600,
   });
   const scale = useSpring(1, {
     ...springConfig,
-    stiffness: 500,
-    damping: 35,
+    stiffness: 600,
+    damping: 40,
   });
 
-  const isMobile = useIsMobile();
-
   useEffect(() => {
+    if (isMobile) return;
+
     const updateVelocity = (currentPos: Position) => {
       const currentTime = Date.now();
       const deltaTime = currentTime - lastUpdateTime.current;
@@ -163,7 +168,7 @@ export function SmoothCursor({
       cursorY.set(currentPos.y);
 
       if (speed > 0.1) {
-        if (!disableRotation) {
+        if (!disableRotation && !prefersReducedMotion) {
           const currentAngle =
             Math.atan2(velocity.current.y, velocity.current.x) *
               (180 / Math.PI) +
@@ -176,14 +181,18 @@ export function SmoothCursor({
           rotation.set(accumulatedRotation.current);
           previousAngle.current = currentAngle;
         }
-        scale.set(0.95);
+
+        scale.set(prefersReducedMotion ? 1 : 0.95);
         setIsMoving(true);
         setHasMoved(true);
 
-        const timeout = setTimeout(() => {
-          scale.set(1);
-          setIsMoving(false);
-        }, 150);
+        const timeout = setTimeout(
+          () => {
+            scale.set(1);
+            setIsMoving(false);
+          },
+          prefersReducedMotion ? 0 : 150,
+        );
 
         return () => clearTimeout(timeout);
       }
@@ -199,18 +208,29 @@ export function SmoothCursor({
       });
     };
 
-    if (!isMobile) document.body.style.cursor = "none";
+    document.body.style.cursor = "none";
     window.addEventListener("mousemove", throttledMouseMove);
 
     return () => {
       window.removeEventListener("mousemove", throttledMouseMove);
-      if (!isMobile) document.body.style.cursor = "auto";
+      document.body.style.cursor = "auto";
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, [cursorX, cursorY, rotation, scale, disableRotation, isMobile]);
+  }, [
+    cursorX,
+    cursorY,
+    rotation,
+    scale,
+    disableRotation,
+    isMobile,
+    hasMoved,
+    prefersReducedMotion,
+    isOverText,
+    isOverPointer,
+  ]);
 
   if (isMobile || !hasMoved) {
-    return <></>;
+    return null;
   }
 
   return (
@@ -220,24 +240,30 @@ export function SmoothCursor({
         left: cursorX,
         top: cursorY,
         scale: scale,
+        transform: "translateZ(0)",
+        backfaceVisibility: "hidden",
+        willChange: "transform, opacity",
       }}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{
         type: "spring",
-        stiffness: 400,
-        damping: 30,
+        stiffness: 300,
+        damping: 25,
+        duration: prefersReducedMotion ? 0 : undefined,
       }}
     >
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
           opacity: cursorType === "pointer" || isOverPointer ? 1 : 0,
-          scale: isMoving ? 1.4 : 1,
-          filter: isMoving ? "blur(2px)" : "none",
+          scale: cursorType === "pointer" || isOverPointer ? 1.2 : 1,
         }}
-        transition={{ duration: 0.3 }}
-        className={`pointer-events-none h-[32px] w-[32px] rounded-full border bg-white transition-all duration-300 ease-out will-change-transform`}
+        transition={{
+          duration: prefersReducedMotion ? 0 : 0.25,
+          scale: { type: "spring", stiffness: 200, damping: 20 },
+        }}
+        className={`pointer-events-none h-[32px] w-[32px] rounded-full border bg-white shadow-sm transition-all duration-300 ease-out will-change-transform`}
       ></motion.div>
 
       <motion.div
@@ -246,8 +272,13 @@ export function SmoothCursor({
           opacity:
             (cursorType === "text" || isOverText) && !isOverPointer ? 1 : 0,
         }}
-        transition={{ duration: 0.3 }}
-        style={{ position: "absolute", top: 0, left: 0 }}
+        transition={{ duration: prefersReducedMotion ? 0 : 0.15 }}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          filter: "drop-shadow(0 1px 1px rgba(0,0,0,0.1))",
+        }}
       >
         <TextCursorSVG />
       </motion.div>
@@ -255,20 +286,15 @@ export function SmoothCursor({
       <motion.div
         initial={{ opacity: 1 }}
         animate={{
-          opacity:
-            cursorType === "text" ||
-            isOverText ||
-            cursorType === "pointer" ||
-            isOverPointer
-              ? 0
-              : 1,
+          opacity: !(isOverText || isOverPointer) ? 1 : 0,
         }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: prefersReducedMotion ? 0 : 0.15 }}
         style={{
           rotate: disableRotation ? -45 : rotation,
           position: "absolute",
           top: 0,
           left: 0,
+          filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.15))",
         }}
       >
         {cursor}
