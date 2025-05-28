@@ -74,7 +74,7 @@ const TextCursorSVG: FC = () => {
 export function SmoothCursor({
   cursor = <DefaultCursorSVG />,
   springConfig = {
-    stiffness: 800,
+    stiffness: 900,
     damping: 50,
     mass: 0.5,
     restDelta: 0.001,
@@ -244,8 +244,8 @@ export function SmoothCursor({
         backfaceVisibility: "hidden",
         willChange: "transform, opacity",
       }}
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{
         type: "spring",
         stiffness: 300,
