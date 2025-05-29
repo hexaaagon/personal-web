@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ThemeSwitch from "./theme-switch";
 
 export default function Navbar() {
@@ -12,7 +13,9 @@ export default function Navbar() {
         />
       </div>
       <div className="flex items-center justify-between py-6 transition-all">
-        <p className="font-mono">hexaa</p>
+        <Link href="/" className="font-mono">
+          hexaa
+        </Link>
         <div className="flex">
           <ThemeSwitch />
         </div>

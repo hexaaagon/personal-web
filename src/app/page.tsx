@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AnimateOnView from "@/components/animation";
 
 export default function Home() {
   return (
