@@ -27,14 +27,22 @@ export default function AnimateOnView({
       const elementDelay = delay + index * 100;
 
       htmlElement.style.opacity = "0";
-      htmlElement.style.transform = "translateY(20px)";
       htmlElement.style.visibility = "hidden";
       htmlElement.style.transition = "none";
+      htmlElement.style.willChange = "transform, opacity";
 
       htmlElement.animate(
         [
-          { opacity: 0, transform: "translateY(20px)", visibility: "hidden" },
-          { opacity: 1, transform: "translateY(0px)", visibility: "visible" },
+          {
+            opacity: 0,
+            transform: "translateY(20px) scale(0.95)",
+            visibility: "hidden",
+          },
+          {
+            opacity: 1,
+            transform: "translateY(0px) scale(1)",
+            visibility: "visible",
+          },
         ],
         {
           duration,

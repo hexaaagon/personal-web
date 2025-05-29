@@ -11,11 +11,9 @@ interface Position {
 
 export interface SmoothCursorProps {
   cursor?: JSX.Element;
-  springConfig?: {
-    damping: number;
-    stiffness: number;
-    mass: number;
-    restDelta: number;
+  transitionConfig?: {
+    duration: number;
+    ease: string;
   };
   disableRotation?: boolean;
   cursorType?: "default" | "text" | "pointer";
@@ -73,11 +71,9 @@ const TextCursorSVG: FC = () => {
 
 export function SmoothCursor({
   cursor = <DefaultCursorSVG />,
-  springConfig = {
-    stiffness: 900,
-    damping: 50,
-    mass: 0.5,
-    restDelta: 0.001,
+  transitionConfig = {
+    duration: 0.15,
+    ease: "easeInOut",
   },
   disableRotation = false,
   cursorType = "default",
@@ -95,17 +91,26 @@ export function SmoothCursor({
   const previousAngle = useRef(-45);
   const accumulatedRotation = useRef(-45);
 
-  const cursorX = useSpring(0, springConfig);
-  const cursorY = useSpring(0, springConfig);
+  // Much more responsive cursor tracking - minimal lag
+  const cursorX = useSpring(0, {
+    stiffness: 1200,
+    damping: 80,
+    mass: 0.3,
+  });
+  const cursorY = useSpring(0, {
+    stiffness: 1200,
+    damping: 80,
+    mass: 0.3,
+  });
   const rotation = useSpring(-45, {
-    ...springConfig,
+    stiffness: 800,
     damping: 60,
-    stiffness: 600,
+    mass: 0.4,
   });
   const scale = useSpring(1, {
-    ...springConfig,
-    stiffness: 600,
-    damping: 40,
+    stiffness: 1000,
+    damping: 70,
+    mass: 0.3,
   });
 
   useEffect(() => {
@@ -182,7 +187,8 @@ export function SmoothCursor({
           previousAngle.current = currentAngle;
         }
 
-        scale.set(prefersReducedMotion ? 1 : 0.95);
+        // Faster scale feedback
+        scale.set(prefersReducedMotion ? 1 : 0.99);
         setIsMoving(true);
         setHasMoved(true);
 
@@ -191,7 +197,7 @@ export function SmoothCursor({
             scale.set(1);
             setIsMoving(false);
           },
-          prefersReducedMotion ? 0 : 150,
+          prefersReducedMotion ? 0 : 50,
         );
 
         return () => clearTimeout(timeout);
@@ -247,10 +253,8 @@ export function SmoothCursor({
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
-        type: "spring",
-        stiffness: 300,
-        damping: 25,
-        duration: prefersReducedMotion ? 0 : undefined,
+        duration: prefersReducedMotion ? 0 : 0.1,
+        ease: "easeOut",
       }}
     >
       <motion.div
@@ -260,8 +264,9 @@ export function SmoothCursor({
           scale: cursorType === "pointer" || isOverPointer ? 1.2 : 1,
         }}
         transition={{
-          duration: prefersReducedMotion ? 0 : 0.25,
-          scale: { type: "spring", stiffness: 200, damping: 20 },
+          duration: prefersReducedMotion ? 0 : 0.08,
+          ease: "easeOut",
+          scale: { duration: 0.06, ease: "easeOut" },
         }}
         className={`pointer-events-none h-[32px] w-[32px] rounded-full border bg-white shadow-sm transition-all duration-300 ease-out will-change-transform`}
       ></motion.div>
@@ -272,7 +277,10 @@ export function SmoothCursor({
           opacity:
             (cursorType === "text" || isOverText) && !isOverPointer ? 1 : 0,
         }}
-        transition={{ duration: prefersReducedMotion ? 0 : 0.15 }}
+        transition={{
+          duration: prefersReducedMotion ? 0 : 0.06,
+          ease: "easeOut",
+        }}
         style={{
           position: "absolute",
           top: 0,
@@ -288,7 +296,10 @@ export function SmoothCursor({
         animate={{
           opacity: !(isOverText || isOverPointer) ? 1 : 0,
         }}
-        transition={{ duration: prefersReducedMotion ? 0 : 0.15 }}
+        transition={{
+          duration: prefersReducedMotion ? 0 : 0.06,
+          ease: "easeOut",
+        }}
         style={{
           rotate: disableRotation ? -45 : rotation,
           position: "absolute",
