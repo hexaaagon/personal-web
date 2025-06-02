@@ -16,6 +16,7 @@ export interface SmoothCursorProps {
     ease: string;
   };
   disableRotation?: boolean;
+  disableSmooth?: boolean;
   cursorType?: "default" | "text" | "pointer";
 }
 
@@ -76,6 +77,7 @@ export function SmoothCursor({
     ease: "easeInOut",
   },
   disableRotation = false,
+  disableSmooth = false,
   cursorType = "default",
 }: SmoothCursorProps) {
   const isMobile = useIsMobile();
@@ -93,14 +95,14 @@ export function SmoothCursor({
 
   // Much more responsive cursor tracking - minimal lag
   const cursorX = useSpring(0, {
-    stiffness: 1200,
-    damping: 80,
-    mass: 0.3,
+    stiffness: disableSmooth ? 10000 : 1200,
+    damping: disableSmooth ? 100 : 80,
+    mass: disableSmooth ? 0.1 : 0.3,
   });
   const cursorY = useSpring(0, {
-    stiffness: 1200,
-    damping: 80,
-    mass: 0.3,
+    stiffness: disableSmooth ? 10000 : 1200,
+    damping: disableSmooth ? 100 : 80,
+    mass: disableSmooth ? 0.1 : 0.3,
   });
   const rotation = useSpring(-45, {
     stiffness: 800,
@@ -233,12 +235,15 @@ export function SmoothCursor({
     prefersReducedMotion,
     isOverText,
     isOverPointer,
+    disableSmooth,
   ]);
 
   if (isMobile || !hasMoved) {
     return null;
   }
 
+  // TODO: improve performance by not using framer motion.
+  // TODO: use vanilla CSS for default state cursor.
   return (
     <motion.div
       className="pointer-events-none fixed z-[99999] translate-x-[-50%] translate-y-[-50%] mix-blend-exclusion will-change-transform"

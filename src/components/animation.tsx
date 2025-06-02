@@ -26,12 +26,14 @@ export default function AnimateOnView({
       const htmlElement = element as HTMLElement;
       const elementDelay = delay + index * 100;
 
+      const originalStyleAttr = htmlElement.getAttribute("style");
+
       htmlElement.style.opacity = "0";
       htmlElement.style.visibility = "hidden";
       htmlElement.style.transition = "none";
       htmlElement.style.willChange = "transform, opacity";
 
-      htmlElement.animate(
+      const animation = htmlElement.animate(
         [
           {
             opacity: 0,
@@ -51,6 +53,16 @@ export default function AnimateOnView({
           fill: "forwards",
         },
       );
+
+      animation.addEventListener("finish", () => {
+        animation.cancel();
+
+        if (originalStyleAttr !== null) {
+          htmlElement.setAttribute("style", originalStyleAttr);
+        } else {
+          htmlElement.removeAttribute("style");
+        }
+      });
     });
   }, [delay, duration]);
 
