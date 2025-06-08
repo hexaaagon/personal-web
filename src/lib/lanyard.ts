@@ -1,30 +1,5 @@
-import { ExtendedLanyardData, LanyardData } from "@/types/lanyard";
-
-// had to rewrite the eventemitter class because of browser compatibility
-class EventEmitter {
-  private events: { [key: string]: ((...args: any[]) => void)[] } = {};
-
-  on(event: string, callback: (...args: any[]) => void) {
-    if (!this.events[event]) {
-      this.events[event] = [];
-    }
-    this.events[event].push(callback);
-  }
-
-  emit(event: string, ...args: any[]) {
-    if (this.events[event]) {
-      this.events[event].forEach((callback) => callback(...args));
-    }
-  }
-
-  removeAllListeners(event?: string) {
-    if (event) {
-      delete this.events[event];
-    } else {
-      this.events = {};
-    }
-  }
-}
+import { ExtendedLanyardData, LanyardData } from "@/shared/types/lanyard";
+import { EventEmitter } from "./helpers";
 
 export interface LanyardWebsocketOptions {
   userId: string;

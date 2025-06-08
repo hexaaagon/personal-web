@@ -16,7 +16,7 @@ export function ThemeProvider({ children }: ComponentProps<"div">) {
       <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
         <ReactLenis root>{children}</ReactLenis>
         <Toaster richColors expand />
-        <SmoothCursor disableRotation disableSmooth />
+        <SmoothCursor disableRotation />
       </NextThemesProvider>
       {/*</ViewTransitions>*/}
 

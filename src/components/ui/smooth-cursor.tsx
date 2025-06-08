@@ -1,6 +1,6 @@
 "use client";
 
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/components/hooks/use-mobile";
 import { motion, useSpring, useReducedMotion } from "motion/react";
 import { FC, JSX, useEffect, useRef, useState } from "react";
 

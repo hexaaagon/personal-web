@@ -22,11 +22,13 @@ export default function AnimateOnView({
       "p, div, h1, h2, h3, h4, h5, h6, span, a, button, section, article, header, footer, main, aside, nav, ul, ol, li",
     );
 
-    elements.forEach((element, index) => {
+    for (const [i, element] of elements.entries()) {
       const htmlElement = element as HTMLElement;
-      const elementDelay = delay + index * 100;
+      const elementDelay = delay + i * 100;
 
-      const originalStyleAttr = htmlElement.getAttribute("style");
+      const originalStyleAttr = JSON.parse(
+        JSON.stringify(htmlElement.getAttribute("style") || {}),
+      );
 
       htmlElement.style.opacity = "0";
       htmlElement.style.visibility = "hidden";
@@ -63,7 +65,7 @@ export default function AnimateOnView({
           htmlElement.removeAttribute("style");
         }
       });
-    });
+    }
   }, [delay, duration]);
 
   return (

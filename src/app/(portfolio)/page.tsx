@@ -8,7 +8,7 @@ export default function Home() {
     <main className="flex flex-col">
       <section className="relative flex min-h-[90svh] flex-col">
         <div className="pb-4 *:leading-5">
-          <p>Backend - Checkpoint 1/5</p>
+          <p>Backend - Checkpoint 4/5</p>
           <p className="text-sm">
             if you wonder what is this, it&apos;s just a checkpoint. visit the{" "}
             <Link
@@ -19,7 +19,7 @@ export default function Home() {
             </Link>{" "}
             instead.
           </p>
-          <p className="text-sm">progress: 10%</p>
+          <p className="text-sm">progress: 90% - finishing</p>
         </div>
         <SocialCard />
         <HeroEnd />

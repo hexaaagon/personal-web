@@ -1,0 +1,1161 @@
+{
+  "discord": {
+    "type": "discord",
+    "data": {
+      "kv": {
+        "website": "https://hexaa.is-a.dev"
+      },
+      "discord_user": {
+        "id": "465454937267240962",
+        "username": "scoooolzs",
+        "clan": null,
+        "primary_guild": {
+          "tag": "FSNK",
+          "identity_guild_id": "1206212469148749834",
+          "badge": "8d687c32ae10f743bf416818ce6c8558",
+          "identity_enabled": true
+        },
+        "avatar_decoration_data": {
+          "sku_id": "1316597786862419988",
+          "asset": "a_db05e7fc49cb1a078f6aec1e559e2891",
+          "expires_at": null
+        },
+        "collectibles": {
+          "nameplate": {
+            "label": "COLLECTIBLES_NAMEPLATES_V2_SWORD_OF_LEGEND_A11Y",
+            "sku_id": "1377377712162738196",
+            "asset": "nameplates/nameplates_v2/sword_of_legend/",
+            "expires_at": null,
+            "palette": "cobalt"
+          }
+        },
+        "avatar": "e37e7cc6e8fc570a310d4c19483a6544",
+        "discriminator": "0",
+        "bot": false,
+        "global_name": "Hexaa",
+        "display_name": "Hexaa",
+        "public_flags": 4194432
+      },
+      "activities": [
+        {
+          "flags": 1,
+          "id": "99cc94cdb3d7cee9",
+          "name": "Visual Studio Code",
+          "type": 0,
+          "state": "Working on social-model.ts:60:40",
+          "session_id": "e2a19129770fb755adb88c91ed05e07e",
+          "details": "In personal-web  - 0 problems found",
+          "application_id": "810516608442695700",
+          "timestamps": {
+            "start": 1749362798523
+          },
+          "assets": {
+            "large_image": "mp:external/ThZlJE1QK8kC3PSrVycZRD_WzkmIOqC9U200K-27eXU/https/raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/ts.png",
+            "large_text": "Editing a TS file",
+            "small_image": "mp:external/Joitre7BBxO-F2IaS7R300AaAcixAvPu3WD1YchRgdc/https/raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/vscode.png",
+            "small_text": "Visual Studio Code"
+          },
+          "created_at": 1749379666455
+        }
+      ],
+      "discord_status": "idle",
+      "active_on_discord_web": false,
+      "active_on_discord_desktop": true,
+      "active_on_discord_mobile": false,
+      "active_on_discord_embedded": false
+    }
+  },
+  "spotify": {
+    "data": {
+      "type": "session",
+      "spotify": {
+        "track": {
+          "id": "3be9ACTxtcL6Zm4vJRUiPG",
+          "url": "https://open.spotify.com/track/3be9ACTxtcL6Zm4vJRUiPG",
+          "title": "blue",
+          "artists": "yung kai",
+          "album": {
+            "name": "blue",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02373c63a4666fb7193febc167"
+          },
+          "duration": 214.357
+        },
+        "status": {
+          "isPlaying": true,
+          "isPaused": false,
+          "progress": 0.177,
+          "timestamp": {
+            "start": 1749379407940,
+            "end": 1749379622297
+          }
+        }
+      },
+      "stats": {
+        "user": {
+          "name": "hexaaagon",
+          "displayName": "hexaaagon",
+          "country": "Indonesia",
+          "playCount": 6345,
+          "timestamp": "2025-02-18T13:34:13.000Z",
+          "image": "https://lastfm.freetls.fastly.net/i/u/300x300/ae15860caa0ab72bf9dc7b21efa5d267.png",
+          "url": "https://www.last.fm/user/hexaaagon"
+        },
+        "topTracks": [
+          {
+            "name": "Heavy",
+            "id": "533d0203-d6d5-4c5f-94f0-754b6a6fbbb9",
+            "url": "https://www.last.fm/music/The+Mar%C3%ADas/_/Heavy",
+            "playCount": 32,
+            "rank": 1,
+            "artist": {
+              "name": "The Marías",
+              "url": "https://www.last.fm/music/The+Mar%C3%ADas",
+              "id": "7a3970c9-ecd8-4eee-a267-4d8c77d97ff3"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "TV",
+            "id": "2ee2fa48-8143-4b7f-96bb-8696d2010f5a",
+            "url": "https://www.last.fm/music/Billie+Eilish/_/TV",
+            "playCount": 28,
+            "rank": 2,
+            "artist": {
+              "name": "Billie Eilish",
+              "url": "https://www.last.fm/music/Billie+Eilish",
+              "id": "f4abc0b5-3f7a-4eff-8f78-ac078dbce533"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "Nobody New",
+            "id": "11bb6328-85a5-425c-8db3-bffe469ae057",
+            "url": "https://www.last.fm/music/The+Mar%C3%ADas/_/Nobody+New",
+            "playCount": 28,
+            "rank": 3,
+            "artist": {
+              "name": "The Marías",
+              "url": "https://www.last.fm/music/The+Mar%C3%ADas",
+              "id": "7a3970c9-ecd8-4eee-a267-4d8c77d97ff3"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "No One Noticed",
+            "id": "56a4c981-da81-4f1f-a382-bbb94f0ba319",
+            "url": "https://www.last.fm/music/The+Mar%C3%ADas/_/No+One+Noticed",
+            "playCount": 26,
+            "rank": 4,
+            "artist": {
+              "name": "The Marías",
+              "url": "https://www.last.fm/music/The+Mar%C3%ADas",
+              "id": "7a3970c9-ecd8-4eee-a267-4d8c77d97ff3"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "back to friends",
+            "id": "",
+            "url": "https://www.last.fm/music/sombr/_/back+to+friends",
+            "playCount": 23,
+            "rank": 5,
+            "artist": {
+              "name": "sombr",
+              "url": "https://www.last.fm/music/sombr",
+              "id": "502cf908-9921-48bc-bf0e-265c881c0156"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "CHIHIRO",
+            "id": "4bcb550c-9160-45ed-9cbe-d6771ad96c9d",
+            "url": "https://www.last.fm/music/Billie+Eilish/_/CHIHIRO",
+            "playCount": 22,
+            "rank": 6,
+            "artist": {
+              "name": "Billie Eilish",
+              "url": "https://www.last.fm/music/Billie+Eilish",
+              "id": "f4abc0b5-3f7a-4eff-8f78-ac078dbce533"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "Sex, Drugs, Etc.",
+            "id": "16195dbc-5de2-4669-82d0-a908b6e1be36",
+            "url": "https://www.last.fm/music/Beach+Weather/_/Sex,+Drugs,+Etc.",
+            "playCount": 19,
+            "rank": 7,
+            "artist": {
+              "name": "Beach Weather",
+              "url": "https://www.last.fm/music/Beach+Weather",
+              "id": ""
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "About You",
+            "id": "f367b0c4-7273-42de-961f-40c43a95bc89",
+            "url": "https://www.last.fm/music/The+1975/_/About+You",
+            "playCount": 19,
+            "rank": 8,
+            "artist": {
+              "name": "The 1975",
+              "url": "https://www.last.fm/music/The+1975",
+              "id": "5b6ebfe0-f72b-4902-bba9-74c8af0f1af0"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "Happier Than Ever",
+            "id": "0107f9aa-0468-450c-a5e0-e9e928ba4269",
+            "url": "https://www.last.fm/music/Billie+Eilish/_/Happier+Than+Ever",
+            "playCount": 18,
+            "rank": 9,
+            "artist": {
+              "name": "Billie Eilish",
+              "url": "https://www.last.fm/music/Billie+Eilish",
+              "id": "f4abc0b5-3f7a-4eff-8f78-ac078dbce533"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "real man",
+            "id": "8bbbc03f-33c9-434c-ad74-2dd98ac42a7f",
+            "url": "https://www.last.fm/music/beabadoobee/_/real+man",
+            "playCount": 16,
+            "rank": 10,
+            "artist": {
+              "name": "beabadoobee",
+              "url": "https://www.last.fm/music/beabadoobee",
+              "id": "88d17133-abbc-42db-9526-4e2c1db60336"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          }
+        ],
+        "recentTracks": [
+          {
+            "name": "death bed (coffee for your head)",
+            "id": "eef40848-a8c2-401a-945f-30d080a79e83",
+            "url": "https://www.last.fm/music/Powfu/_/death+bed+(coffee+for+your+head)",
+            "album": {
+              "name": "death bed (coffee for your head)",
+              "id": ""
+            },
+            "artist": {
+              "name": "Powfu",
+              "id": "bfb7bc12-4b79-412f-8303-ad6d7c772aca"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/5b88ff2d452a7a89dc34134c49ef8aa9.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T06:27:01.000Z"
+          },
+          {
+            "name": "Moral of the Story",
+            "id": "024643fc-6010-44a6-a55a-fa8a9b1342cc",
+            "url": "https://www.last.fm/music/Ashe/_/Moral+of+the+Story",
+            "album": {
+              "name": "Ashlyn",
+              "id": ""
+            },
+            "artist": {
+              "name": "Ashe",
+              "id": "c576a7b0-c768-4760-9306-466429d0884a"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/85d78d15d8c43edd2b18e528c5283ed1.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T06:23:40.000Z"
+          },
+          {
+            "name": "All I Want - From \"High School Musical: The Musical: The Series\"",
+            "id": "b7c7c149-a73a-4075-a87c-d8193e961f13",
+            "url": "https://www.last.fm/music/Olivia+Rodrigo/_/All+I+Want+-+From+%22High+School+Musical:+The+Musical:+The+Series%22",
+            "album": {
+              "name": "All I Want (From \"High School Musical: The Musical: The Series\")",
+              "id": "022db5bc-65d4-47d4-adff-b5a3e853657e"
+            },
+            "artist": {
+              "name": "Olivia Rodrigo",
+              "id": "6925db17-f35e-42f3-a4eb-84ee6bf5d4b0"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d9b45955476da6a095b0be3ef0bb9dbe.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T06:20:41.000Z"
+          },
+          {
+            "name": "All I Want",
+            "id": "af36a04d-0f41-468c-89db-6913fcb00588",
+            "url": "https://www.last.fm/music/Kodaline/_/All+I+Want",
+            "album": {
+              "name": "In A Perfect World (Expanded Edition)",
+              "id": ""
+            },
+            "artist": {
+              "name": "Kodaline",
+              "id": "74aab3b7-93a5-473c-a729-f975234c58b6"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/39c88be2aca22edc11c1aaf320fb9f37.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T06:15:03.000Z"
+          },
+          {
+            "name": "TV",
+            "id": "2ee2fa48-8143-4b7f-96bb-8696d2010f5a",
+            "url": "https://www.last.fm/music/Billie+Eilish/_/TV",
+            "album": {
+              "name": "Guitar Songs",
+              "id": "03651c58-0658-4fee-96be-199ad9b08541"
+            },
+            "artist": {
+              "name": "Billie Eilish",
+              "id": "f4abc0b5-3f7a-4eff-8f78-ac078dbce533"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/951a8387b598c0bbe4aa53b3627c0f35.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T06:10:22.000Z"
+          },
+          {
+            "name": "Happier Than Ever",
+            "id": "0107f9aa-0468-450c-a5e0-e9e928ba4269",
+            "url": "https://www.last.fm/music/Billie+Eilish/_/Happier+Than+Ever",
+            "album": {
+              "name": "Happier Than Ever",
+              "id": "0095938b-b9a2-4f72-86ee-9be5c35ee0fd"
+            },
+            "artist": {
+              "name": "Billie Eilish",
+              "id": "f4abc0b5-3f7a-4eff-8f78-ac078dbce533"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7ebd8b6f8ac6766fb26303245a265a2e.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T06:05:23.000Z"
+          },
+          {
+            "name": "CHIHIRO",
+            "id": "4bcb550c-9160-45ed-9cbe-d6771ad96c9d",
+            "url": "https://www.last.fm/music/Billie+Eilish/_/CHIHIRO",
+            "album": {
+              "name": "Hit Me Hard and Soft",
+              "id": "43869ac5-c515-41a4-8ce1-d4a0c67e30c1"
+            },
+            "artist": {
+              "name": "Billie Eilish",
+              "id": "f4abc0b5-3f7a-4eff-8f78-ac078dbce533"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6db576307ee7bdd81056432542b6bab7.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T05:45:28.000Z"
+          },
+          {
+            "name": "Margaret (feat. Bleachers)",
+            "id": "523870c9-a497-42d8-8f5d-823733bbf77d",
+            "url": "https://www.last.fm/music/Lana+Del+Rey/_/Margaret+(feat.+Bleachers)",
+            "album": {
+              "name": "Did you know that there's a tunnel under Ocean Blvd",
+              "id": "e333eec2-2da9-4b25-a538-fbfa364e4570"
+            },
+            "artist": {
+              "name": "Lana Del Rey",
+              "id": "b7539c32-53e7-4908-bda3-81449c367da6"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/d997c7f2b282ddee62c10623a80b752d.png",
+            "nowPlaying": false,
+            "date": "2025-06-08T05:39:17.000Z"
+          },
+          {
+            "name": "real man",
+            "id": "8bbbc03f-33c9-434c-ad74-2dd98ac42a7f",
+            "url": "https://www.last.fm/music/beabadoobee/_/real+man",
+            "album": {
+              "name": "This Is How Tomorrow Moves",
+              "id": "286e4c7f-e04b-4249-9241-39c84c5079de"
+            },
+            "artist": {
+              "name": "beabadoobee",
+              "id": "88d17133-abbc-42db-9526-4e2c1db60336"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/794fdafa7b5fe907c6f9abe41060af6d.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T05:36:12.000Z"
+          },
+          {
+            "name": "Come Inside Of My Heart",
+            "id": "3561e03a-56e4-42df-8b12-d9a22badbfaa",
+            "url": "https://www.last.fm/music/IV+Of+Spades/_/Come+Inside+Of+My+Heart",
+            "album": {
+              "name": "CLAPCLAPCLAP!",
+              "id": "dcf6ff96-0644-440c-ad4d-92b1dab9c753"
+            },
+            "artist": {
+              "name": "IV Of Spades",
+              "id": "9e86ab96-b0d9-4ede-8baf-cce5cb2e1d5d"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/1da8ab58ae99751537b0d4d3650df75a.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T05:31:01.000Z"
+          },
+          {
+            "name": "Cry",
+            "id": "101d6316-97d7-44f5-b100-f6eaebeabf44",
+            "url": "https://www.last.fm/music/Cigarettes+After+Sex/_/Cry",
+            "album": {
+              "name": "Cry",
+              "id": "20d6d960-c7c3-4c05-8fb9-ca7509863f02"
+            },
+            "artist": {
+              "name": "Cigarettes After Sex",
+              "id": "34557d8f-ee4a-44ab-ae6e-49bb8ac604d0"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/7f3eebc25ed0d0560adeb5c4d40007f9.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T05:26:43.000Z"
+          },
+          {
+            "name": "Heaven Knows I'm Miserable Now - 2011 Remaster",
+            "id": "661e5275-3c32-42c1-a45e-5b20e7a0e9eb",
+            "url": "https://www.last.fm/music/The+Smiths/_/Heaven+Knows+I%27m+Miserable+Now+-+2011+Remaster",
+            "album": {
+              "name": "Hatful of Hollow",
+              "id": "05eae5e7-c7f0-4ca2-8b0e-2be4f4506983"
+            },
+            "artist": {
+              "name": "The Smiths",
+              "id": "40f5d9e4-2de7-4f2d-ad41-e31a9a9fea27"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/1795412592fe11f22c78aefb2e60beb9.png",
+            "nowPlaying": false,
+            "date": "2025-06-08T05:23:07.000Z"
+          },
+          {
+            "name": "As the World Caves in",
+            "id": "d02fd6c8-ee4c-4b24-b8f8-df65eaf0d8cd",
+            "url": "https://www.last.fm/music/Matt+Maltese/_/As+the+World+Caves+in",
+            "album": {
+              "name": "Bad Contestant",
+              "id": "3cc5f933-0774-489c-b3cf-d7de4c52bbde"
+            },
+            "artist": {
+              "name": "Matt Maltese",
+              "id": "b27d089c-6b08-4067-9293-406cebde0374"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/0ae97ed7cb6edb8c86eaae63d02f1fa3.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T05:19:28.000Z"
+          },
+          {
+            "name": "Animal Noises",
+            "id": "40688d5d-e09e-4b46-ac82-b62e2ad04f50",
+            "url": "https://www.last.fm/music/beabadoobee/_/Animal+Noises",
+            "album": {
+              "name": "Our Extended Play",
+              "id": ""
+            },
+            "artist": {
+              "name": "beabadoobee",
+              "id": "88d17133-abbc-42db-9526-4e2c1db60336"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/6dc8b7efbf7c886d5b6e058e1cd61ec0.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T05:15:53.000Z"
+          },
+          {
+            "name": "The Blonde",
+            "id": "59dd9888-d4b4-4ced-9bb8-98cd0dda0046",
+            "url": "https://www.last.fm/music/TV+Girl/_/The+Blonde",
+            "album": {
+              "name": "French Exit",
+              "id": "e461c1b4-4eb5-46c2-8eb1-1b29e1befdf4"
+            },
+            "artist": {
+              "name": "TV Girl",
+              "id": "38f0c7ac-46eb-49ca-b3ab-c785ccd05a60"
+            },
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/4f091d5082e04691c6d7f4b2e2efbdc0.jpg",
+            "nowPlaying": false,
+            "date": "2025-06-08T05:12:05.000Z"
+          }
+        ],
+        "topArtists": [
+          {
+            "name": "Billie Eilish",
+            "id": "f4abc0b5-3f7a-4eff-8f78-ac078dbce533",
+            "url": "https://www.last.fm/music/Billie+Eilish",
+            "playCount": 122,
+            "rank": 1,
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "The Marías",
+            "id": "7a3970c9-ecd8-4eee-a267-4d8c77d97ff3",
+            "url": "https://www.last.fm/music/The+Mar%C3%ADas",
+            "playCount": 112,
+            "rank": 2,
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "beabadoobee",
+            "id": "88d17133-abbc-42db-9526-4e2c1db60336",
+            "url": "https://www.last.fm/music/beabadoobee",
+            "playCount": 46,
+            "rank": 3,
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "sombr",
+            "id": "502cf908-9921-48bc-bf0e-265c881c0156",
+            "url": "https://www.last.fm/music/sombr",
+            "playCount": 45,
+            "rank": 4,
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          },
+          {
+            "name": "Cigarettes After Sex",
+            "id": "34557d8f-ee4a-44ab-ae6e-49bb8ac604d0",
+            "url": "https://www.last.fm/music/Cigarettes+After+Sex",
+            "playCount": 43,
+            "rank": 5,
+            "image": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
+          }
+        ]
+      },
+      "cache": {
+        "rate": "HIT",
+        "size": 23.17,
+        "date": "2025-06-08T10:21:44.285Z",
+        "views": 16
+      }
+    }
+  },
+  "lyrics": {
+    "type": "lyrics",
+    "lyrics": {
+      "type": "syllable",
+      "startTime": 23.056,
+      "endTime": 87.906,
+      "content": [
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "Touch",
+                "isPartOfWord": false,
+                "startTime": 23.056,
+                "endTime": 23.95
+              },
+              {
+                "text": "my",
+                "isPartOfWord": false,
+                "startTime": 23.95,
+                "endTime": 24.158
+              },
+              {
+                "text": "body",
+                "isPartOfWord": false,
+                "startTime": 24.158,
+                "endTime": 24.736
+              },
+              {
+                "text": "tender",
+                "isPartOfWord": false,
+                "startTime": 24.736,
+                "endTime": 25.816
+              }
+            ],
+            "startTime": 23.056,
+            "endTime": 25.816
+          }
+        },
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "'Cause",
+                "isPartOfWord": false,
+                "startTime": 27.671,
+                "endTime": 28.113
+              },
+              {
+                "text": "the",
+                "isPartOfWord": false,
+                "startTime": 28.113,
+                "endTime": 28.399
+              },
+              {
+                "text": "feeling",
+                "isPartOfWord": false,
+                "startTime": 28.399,
+                "endTime": 29.41
+              },
+              {
+                "text": "makes",
+                "isPartOfWord": false,
+                "startTime": 29.41,
+                "endTime": 29.749
+              },
+              {
+                "text": "me",
+                "isPartOfWord": false,
+                "startTime": 29.749,
+                "endTime": 30.076
+              },
+              {
+                "text": "weak",
+                "isPartOfWord": false,
+                "startTime": 30.076,
+                "endTime": 31.042
+              }
+            ],
+            "startTime": 27.671,
+            "endTime": 31.042
+          }
+        },
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "Kicking",
+                "isPartOfWord": false,
+                "startTime": 33.412,
+                "endTime": 34.526
+              },
+              {
+                "text": "off",
+                "isPartOfWord": false,
+                "startTime": 34.526,
+                "endTime": 34.842
+              },
+              {
+                "text": "the",
+                "isPartOfWord": false,
+                "startTime": 34.842,
+                "endTime": 35.145
+              },
+              {
+                "text": "covers",
+                "isPartOfWord": false,
+                "startTime": 35.145,
+                "endTime": 36.292
+              }
+            ],
+            "startTime": 33.412,
+            "endTime": 36.292
+          }
+        },
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "I",
+                "isPartOfWord": false,
+                "startTime": 37.961,
+                "endTime": 38.272
+              },
+              {
+                "text": "see",
+                "isPartOfWord": false,
+                "startTime": 38.272,
+                "endTime": 38.814
+              },
+              {
+                "text": "the",
+                "isPartOfWord": false,
+                "startTime": 38.814,
+                "endTime": 38.95
+              },
+              {
+                "text": "ceiling",
+                "isPartOfWord": false,
+                "startTime": 38.95,
+                "endTime": 39.789
+              },
+              {
+                "text": "while",
+                "isPartOfWord": false,
+                "startTime": 39.789,
+                "endTime": 40.123
+              },
+              {
+                "text": "you're",
+                "isPartOfWord": false,
+                "startTime": 40.123,
+                "endTime": 40.339
+              },
+              {
+                "text": "looking",
+                "isPartOfWord": false,
+                "startTime": 40.339,
+                "endTime": 40.774
+              },
+              {
+                "text": "down",
+                "isPartOfWord": false,
+                "startTime": 40.774,
+                "endTime": 41.142
+              },
+              {
+                "text": "at",
+                "isPartOfWord": false,
+                "startTime": 41.142,
+                "endTime": 41.491
+              },
+              {
+                "text": "me",
+                "isPartOfWord": false,
+                "startTime": 41.491,
+                "endTime": 42.358
+              }
+            ],
+            "startTime": 37.961,
+            "endTime": 42.358
+          }
+        },
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "How",
+                "isPartOfWord": false,
+                "startTime": 44.015,
+                "endTime": 44.873
+              },
+              {
+                "text": "can",
+                "isPartOfWord": false,
+                "startTime": 44.873,
+                "endTime": 45.236
+              },
+              {
+                "text": "we",
+                "isPartOfWord": false,
+                "startTime": 45.236,
+                "endTime": 45.54
+              },
+              {
+                "text": "go",
+                "isPartOfWord": false,
+                "startTime": 45.54,
+                "endTime": 46.428
+              },
+              {
+                "text": "back",
+                "isPartOfWord": false,
+                "startTime": 46.521,
+                "endTime": 47.182
+              },
+              {
+                "text": "to",
+                "isPartOfWord": false,
+                "startTime": 47.182,
+                "endTime": 47.539
+              },
+              {
+                "text": "being",
+                "isPartOfWord": false,
+                "startTime": 47.539,
+                "endTime": 48.193
+              },
+              {
+                "text": "friends",
+                "isPartOfWord": false,
+                "startTime": 48.193,
+                "endTime": 48.91
+              }
+            ],
+            "startTime": 44.015,
+            "endTime": 48.91
+          }
+        },
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "When",
+                "isPartOfWord": false,
+                "startTime": 48.91,
+                "endTime": 49.322
+              },
+              {
+                "text": "we",
+                "isPartOfWord": false,
+                "startTime": 49.322,
+                "endTime": 49.911
+              },
+              {
+                "text": "just",
+                "isPartOfWord": false,
+                "startTime": 49.911,
+                "endTime": 50.584
+              },
+              {
+                "text": "shared",
+                "isPartOfWord": false,
+                "startTime": 50.584,
+                "endTime": 51.488
+              },
+              {
+                "text": "a",
+                "isPartOfWord": false,
+                "startTime": 51.488,
+                "endTime": 51.649
+              },
+              {
+                "text": "bed?",
+                "isPartOfWord": false,
+                "startTime": 51.649,
+                "endTime": 52.991
+              }
+            ],
+            "startTime": 48.91,
+            "endTime": 52.991
+          }
+        },
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "How",
+                "isPartOfWord": false,
+                "startTime": 54.459,
+                "endTime": 55.288
+              },
+              {
+                "text": "can",
+                "isPartOfWord": false,
+                "startTime": 55.288,
+                "endTime": 55.597
+              },
+              {
+                "text": "you",
+                "isPartOfWord": false,
+                "startTime": 55.597,
+                "endTime": 55.948
+              },
+              {
+                "text": "look",
+                "isPartOfWord": false,
+                "startTime": 55.948,
+                "endTime": 56.446
+              },
+              {
+                "text": "at",
+                "isPartOfWord": false,
+                "startTime": 56.698,
+                "endTime": 57.382
+              },
+              {
+                "text": "me",
+                "isPartOfWord": false,
+                "startTime": 57.382,
+                "endTime": 57.751
+              },
+              {
+                "text": "and",
+                "isPartOfWord": false,
+                "startTime": 57.751,
+                "endTime": 58.048
+              },
+              {
+                "text": "pretend",
+                "isPartOfWord": false,
+                "startTime": 58.048,
+                "endTime": 59.107
+              }
+            ],
+            "startTime": 54.459,
+            "endTime": 59.107
+          }
+        },
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "I'm",
+                "isPartOfWord": false,
+                "startTime": 59.107,
+                "endTime": 59.573
+              },
+              {
+                "text": "someone",
+                "isPartOfWord": false,
+                "startTime": 59.573,
+                "endTime": 60.745
+              },
+              {
+                "text": "you've",
+                "isPartOfWord": false,
+                "startTime": 60.745,
+                "endTime": 61.084
+              },
+              {
+                "text": "never",
+                "isPartOfWord": false,
+                "startTime": 61.084,
+                "endTime": 62.03
+              },
+              {
+                "text": "met?",
+                "isPartOfWord": false,
+                "startTime": 62.03,
+                "endTime": 63.507
+              }
+            ],
+            "startTime": 59.107,
+            "endTime": 63.507
+          }
+        },
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "It",
+                "isPartOfWord": false,
+                "startTime": 64.502,
+                "endTime": 65.105
+              },
+              {
+                "text": "was",
+                "isPartOfWord": false,
+                "startTime": 65.105,
+                "endTime": 65.432
+              },
+              {
+                "text": "last",
+                "isPartOfWord": false,
+                "startTime": 65.432,
+                "endTime": 65.783
+              },
+              {
+                "text": "December",
+                "isPartOfWord": false,
+                "startTime": 65.783,
+                "endTime": 67.102
+              }
+            ],
+            "startTime": 64.502,
+            "endTime": 67.102
+          }
+        },
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "You",
+                "isPartOfWord": false,
+                "startTime": 68.991,
+                "endTime": 69.271
+              },
+              {
+                "text": "were",
+                "isPartOfWord": false,
+                "startTime": 69.271,
+                "endTime": 69.604
+              },
+              {
+                "text": "laying",
+                "isPartOfWord": false,
+                "startTime": 69.604,
+                "endTime": 70.76
+              },
+              {
+                "text": "on",
+                "isPartOfWord": false,
+                "startTime": 70.76,
+                "endTime": 71.081
+              },
+              {
+                "text": "my",
+                "isPartOfWord": false,
+                "startTime": 71.081,
+                "endTime": 71.378
+              },
+              {
+                "text": "chest",
+                "isPartOfWord": false,
+                "startTime": 71.378,
+                "endTime": 72.423
+              }
+            ],
+            "startTime": 68.991,
+            "endTime": 72.423
+          }
+        },
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "I",
+                "isPartOfWord": false,
+                "startTime": 74.755,
+                "endTime": 75.364
+              },
+              {
+                "text": "still",
+                "isPartOfWord": false,
+                "startTime": 75.364,
+                "endTime": 76.167
+              },
+              {
+                "text": "remember",
+                "isPartOfWord": false,
+                "startTime": 76.167,
+                "endTime": 77.518
+              }
+            ],
+            "startTime": 74.755,
+            "endTime": 77.518
+          }
+        },
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "I",
+                "isPartOfWord": false,
+                "startTime": 79.144,
+                "endTime": 79.431
+              },
+              {
+                "text": "was",
+                "isPartOfWord": false,
+                "startTime": 79.431,
+                "endTime": 80.08
+              },
+              {
+                "text": "scared",
+                "isPartOfWord": false,
+                "startTime": 80.08,
+                "endTime": 80.603
+              },
+              {
+                "text": "to",
+                "isPartOfWord": false,
+                "startTime": 80.603,
+                "endTime": 80.937
+              },
+              {
+                "text": "take",
+                "isPartOfWord": false,
+                "startTime": 80.937,
+                "endTime": 81.288
+              },
+              {
+                "text": "a",
+                "isPartOfWord": false,
+                "startTime": 81.288,
+                "endTime": 81.591
+              },
+              {
+                "text": "breath",
+                "isPartOfWord": false,
+                "startTime": 81.591,
+                "endTime": 82.314
+              }
+            ],
+            "startTime": 79.144,
+            "endTime": 82.314
+          }
+        },
+        {
+          "type": "vocal",
+          "oppositeAligned": false,
+          "lead": {
+            "syllables": [
+              {
+                "text": "Didn't",
+                "isPartOfWord": false,
+                "startTime": 82.314,
+                "endTime": 82.946
+              },
+              {
+                "text": "want",
+                "isPartOfWord": false,
+                "startTime": 82.946,
+                "endTime": 83.327
+              },
+              {
+                "text": "you",
+                "isPartOfWord": false,
+                "startTime": 83.327,
+                "endTime": 83.642
+              },
+              {
+                "text": "to",
+                "isPartOfWord": false,
+                "startTime": 83.642,
+                "endTime": 83.928
+              },
+              {
+                "text": "move",
+                "isPartOfWord": false,
+                "startTime": 83.928,
+                "endTime": 84.553
+              },
+              {
+                "text": "your",
+                "isPartOfWord": false,
+                "startTime": 84.553,
+                "endTime": 85.261
+              },
+              {
+                "text": "head",
+                "isPartOfWord": false,
+                "startTime": 85.261,
+                "endTime": 87.906
+              }
+            ],
+            "startTime": 82.314,
+            "endTime": 87.906
+          }
+        }
+      ]
+    },
+    "pagination": {
+      "lyrics": {
+        "backward": 0,
+        "current": 1,
+        "future": 12
+      },
+      "cache": {
+        "rate": "HIT",
+        "date": "2025-06-08T02:57:30.674Z",
+        "views": 2,
+        "type": "LRU",
+        "totalSize": 17.17,
+        "currentSize": 6.87,
+        "nextSize": 5.31
+      },
+      "nextFetch": 88,
+      "recommendedNextFetch": 77,
+      "currentIndex": 0
+    },
+    "meta": {
+      "trackId": "0FTmksd2dxiE5e3rWyJXs6",
+      "currentDuration": 0.337,
+      "totalDuration": 199.032,
+      "chunked": true
+    }
+  }
+}
