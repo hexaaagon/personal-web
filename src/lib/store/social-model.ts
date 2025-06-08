@@ -4,6 +4,7 @@ import {
   DiscordResponse,
   isSpotifySessionData,
   isSpotifyStatusData,
+  isSpotifyTrackData,
   ProcessedSpotifyData,
   SpotifyLyricsData,
   SpotifySessionData,
@@ -55,7 +56,18 @@ const model: StoreModel = {
       if (isSpotifySessionData(data.data)) {
         const { type, ...sessionData } = data.data;
         actions.setSpotify(sessionData);
-      } else if (isSpotifyStatusData(data.data)) {
+      } else if (isSpotifyTrackData(data.data)) {
+        const { type, ...trackData } = data.data;
+
+        const state = store.getState();
+        if (!state.spotify) return;
+
+        actions.setSpotify({
+          ...state.spotify,
+          ...trackData,
+        });
+      }
+      if (isSpotifyStatusData(data.data)) {
         const state = store.getState();
         if (!state.spotify) return;
 
