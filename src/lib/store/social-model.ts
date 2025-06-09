@@ -1,4 +1,4 @@
-import { action, Action, thunk, Thunk } from "easy-peasy";
+import { action, Action, persist, thunk, Thunk } from "easy-peasy";
 import { SocialWebsocket } from "../websocket/social";
 import {
   DiscordResponse,
@@ -26,7 +26,7 @@ export interface StoreModel {
   socialWS: Thunk<this, void>;
 }
 
-const model: StoreModel = {
+const model: StoreModel = persist({
   discord: null,
   spotify: null,
   lyrics: null,
@@ -91,6 +91,6 @@ const model: StoreModel = {
 
     return social;
   }),
-};
+});
 
 export default model;

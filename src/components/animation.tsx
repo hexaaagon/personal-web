@@ -22,13 +22,20 @@ export default function AnimateOnView({
       "p, div, h1, h2, h3, h4, h5, h6, span, a, button, section, article, header, footer, main, aside, nav, ul, ol, li",
     );
 
+    const animations: Animation[] = [];
+
     for (const [i, element] of elements.entries()) {
       const htmlElement = element as HTMLElement;
       const elementDelay = delay + i * 100;
 
-      const originalStyleAttr = JSON.parse(
-        JSON.stringify(htmlElement.getAttribute("style") || {}),
-      );
+      let originalStyleAttr = htmlElement.getAttribute("data-original-style");
+      if (originalStyleAttr === null) {
+        originalStyleAttr = htmlElement.getAttribute("style");
+        htmlElement.setAttribute(
+          "data-original-style",
+          originalStyleAttr || "",
+        );
+      }
 
       htmlElement.style.opacity = "0";
       htmlElement.style.visibility = "hidden";
@@ -56,16 +63,48 @@ export default function AnimateOnView({
         },
       );
 
+      animations.push(animation);
+
       animation.addEventListener("finish", () => {
         animation.cancel();
 
-        if (originalStyleAttr !== null) {
-          htmlElement.setAttribute("style", originalStyleAttr);
+        const storedOriginalStyles = htmlElement.getAttribute(
+          "data-original-style",
+        );
+        if (storedOriginalStyles && storedOriginalStyles !== "") {
+          htmlElement.setAttribute("style", storedOriginalStyles);
         } else {
           htmlElement.removeAttribute("style");
         }
+
+        htmlElement.removeAttribute("data-original-style");
       });
     }
+
+    // Cleanup function to cancel animations and restore styles if component unmounts
+    return () => {
+      animations.forEach((animation) => {
+        if (animation.playState !== "finished") {
+          animation.cancel();
+        }
+      });
+
+      // Restore original styles for any elements that still have the data attribute
+      elements.forEach((element) => {
+        const htmlElement = element as HTMLElement;
+        const storedOriginalStyles = htmlElement.getAttribute(
+          "data-original-style",
+        );
+        if (storedOriginalStyles !== null) {
+          if (storedOriginalStyles !== "") {
+            htmlElement.setAttribute("style", storedOriginalStyles);
+          } else {
+            htmlElement.removeAttribute("style");
+          }
+          htmlElement.removeAttribute("data-original-style");
+        }
+      });
+    };
   }, [delay, duration]);
 
   return (
