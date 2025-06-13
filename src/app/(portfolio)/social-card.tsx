@@ -18,6 +18,10 @@ function SocialCard() {
 export default function SocialCardProvider() {
   useEffect(() => {
     store.getActions().init();
+
+    return () => {
+      store.getActions().cleanup();
+    };
   }, []);
 
   return (
