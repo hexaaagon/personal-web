@@ -2,7 +2,7 @@ import HeroEnd from "./hero-end";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[90vh] flex-col">
+    <section className="relative flex min-h-[90svh] flex-col">
       <div className="flex h-[80vh] flex-col justify-around *:transition-all lg:flex-row-reverse lg:items-center lg:justify-between lg:gap-0">
         <span className="flex flex-col items-end text-right *:transition-all lg:pb-64">
           <h1 className="font-montreal text-3xl font-medium sm:text-4xl lg:text-[2.5rem] lg:leading-14">
