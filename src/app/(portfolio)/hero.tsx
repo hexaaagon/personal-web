@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[90svh] flex-col">
       <div className="flex h-[80vh] flex-col justify-around *:transition-all lg:flex-row-reverse lg:items-center lg:justify-between lg:gap-0">
-        <span className="flex flex-col items-end text-right *:transition-all lg:pb-64">
+        <span className="flex flex-col items-center text-center *:transition-all lg:items-end lg:pb-64 lg:text-right">
           <h1 className="font-montreal text-3xl font-medium sm:text-4xl lg:text-[2.5rem] lg:leading-14">
             hey, i&apos;m hexaa 👋
           </h1>
