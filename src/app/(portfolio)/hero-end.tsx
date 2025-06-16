@@ -23,7 +23,7 @@ export default function HeroEnd() {
   return (
     <div className="absolute right-0 bottom-4 left-0 w-full">
       <span
-        className={`font-montreal-mono relative container flex items-end justify-between text-xs transition-[opacity] duration-300 ${isAtTop ? "opacity-90 dark:opacity-75" : "pointer-events-none opacity-0"}`}
+        className={`font-montreal-mono relative flex items-end justify-between text-xs transition-[opacity] duration-300 ${isAtTop ? "opacity-90 dark:opacity-75" : "pointer-events-none opacity-0"}`}
       >
         <Link href="https://time.is/Jakarta" target="_blank">
           [{isAtTop ? <LocalTime /> : "0:00 AM"}]
