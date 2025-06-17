@@ -3,7 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   experimental: {
     viewTransition: true,
-    useLightningcss: true,
+    // lightning css doesn't support postcss yet.
+    // useLightningcss: true, 
   },
   rewrites: async () => {
     return [
